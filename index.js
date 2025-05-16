@@ -1,3 +1,26 @@
+// Add js-enabled class to body when JavaScript is running
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('js-enabled');
+    
+    // Immediately make all section content visible regardless of animation state
+    document.querySelectorAll('.section-content').forEach(section => {
+        section.style.opacity = "1";
+        section.style.transform = "translateY(0)";
+        section.classList.add('visible');
+    });
+    
+    // Make all section titles visible
+    document.querySelectorAll('.section-title').forEach(title => {
+        title.style.opacity = "1";
+    });
+    
+    // Make all examples, formulas, and fun facts visible
+    document.querySelectorAll('.fun-fact, .formula, .example').forEach(element => {
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+    });
+});
+
 // DOM Elements
 const drawerToggle = document.getElementById('drawer-toggle');
 const drawer = document.getElementById('drawer');
@@ -145,7 +168,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             // Make section title visible if it's not already
             const sectionTitle = entry.target.querySelector('.section-title');
-            if (sectionTitle && !sectionTitle.style.opacity) {
+            if (sectionTitle) {
                 sectionTitle.style.opacity = "1";
             }
             
@@ -153,6 +176,8 @@ const observer = new IntersectionObserver((entries) => {
             const sectionContent = entry.target.querySelector('.section-content');
             if (sectionContent) {
                 sectionContent.classList.add('visible');
+                sectionContent.style.opacity = "1";
+                sectionContent.style.transform = "translateY(0)";
             }
             
             // Observe each element with .fun-fact, .formula, or .example class

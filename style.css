@@ -476,9 +476,15 @@ body {
 /* Content animations when scrolled into view */
 .section-content {
     margin-bottom: 1.5rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Only apply animations when JavaScript is working */
+.js-enabled .section-content {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section-content.visible {
