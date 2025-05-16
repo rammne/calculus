@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculus Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Math Calculus Blog</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link" id="home-link">Home</a>
+            <a href="#about" class="nav-link" id="about-link">About</a>
+        </div>
+    </nav>
+
+    <!-- Drawer toggle button -->
+    <div class="drawer-toggle" id="drawer-toggle">
+        <span>≡</span>
+    </div>
+
+    <!-- Drawer -->
+    <div class="drawer" id="drawer">
+        <button class="drawer-close" id="drawer-close">×</button>
+        <div class="drawer-section">
+            <a href="#intro-integral" class="drawer-link">Introduction to Integral Calculus</a>
+        </div>
+        <div class="drawer-section">
+            <a href="#integration-parts" class="drawer-link">Integration by Parts</a>
+        </div>
+        <div class="drawer-section">
+            <a href="#integration-substitution" class="drawer-link">Integration by Substitution</a>
+        </div>
+        <div class="drawer-section">
+            <a href="#areas-definite-integrals" class="drawer-link">Areas and Definite Integrals</a>
+        </div>
+        <div class="drawer-section">
+            <a href="#volumes" class="drawer-link">Volumes by Disks, Washers and Shells</a>
+        </div>
+    </div>
+
+    <!-- Drawer backdrop -->
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Master Integral Calculus</h1>
+        <p>Explore the fascinating world of integration through comprehensive lessons, practical examples, and real-world applications.</p>
+        <a href="#intro-integral" class="hero-btn">Start Learning</a>
+    </section>
+
+    <!-- Content sections -->
+    <main id="content">
+        <!-- Introduction to Integral Calculus -->
+        <section class="content-section" id="intro-integral">
+            <h2 class="section-title">Introduction to Integral Calculus</h2>
+            
+            <div class="section-content">
+                <h3 class="section-subtitle">Definition</h3>
+                <p>Integration is the process to find the direct relationship between two variables. It's a very important mathematical tool used in many fields. It helps us estimate things like <em>marginal costs, marginal revenue, profit</em> and <em>gross loss</em>.</p>
+                
+                <a href="https://youtu.be/o75AqTInKDU?feature=shared" class="youtube-link" target="_blank">Watch YouTube Tutorial</a>
+                
+                <h3 class="section-subtitle">Application of Integration</h3>
+                
+                <div class="fun-fact">
+                    <p class="fun-fact-title">Fun fact 1!</p>
+                    <p>The PETRONAS TOWERS in Kuala Lumpur experiences high forces due to winds. Integration was used to design the building for strength.</p>
+                    <div class="image-placeholder">Petronas Towers Image</div>
+                </div>
+                
+                <div class="fun-fact">
+                    <p class="fun-fact-title">Fun Fact 2!</p>
+                    <p>The SYDNEY OPERA HOUSE has a very unusual design that was based on the slices of a ball. Many differential equations were solved while designing the building.</p>
+                    <div class="image-placeholder">Sydney Opera House Image</div>
+                </div>
+                
+                <div class="fun-fact">
+                    <p class="fun-fact-title">Fun fact 3!</p>
+                    <p>Finding the volumes of wine casks is historically one of the first uses of integration.</p>
+                    <div class="image-placeholder">Wine Casks Image</div>
+                </div>
+                
+                <a href="https://classroom.google.com/c/NzQ2NTI5NzkzODI0/m/NzQ2NTMyMzgyNzY0/details" class="resource-link" target="_blank">Download PDF/PPT Resources</a>
+            </div>
+        </section>
+
+        <!-- Integration by Parts -->
+        <section class="content-section" id="integration-parts">
+            <h2 class="section-title">Integration by Parts</h2>
+            
+            <div class="section-content">
+                <a href="https://youtu.be/sWSLLO3DS1I?feature=shared" class="youtube-link" target="_blank">Watch YouTube Tutorial</a>
+                
+                <h3 class="section-subtitle">Content</h3>
+                <p>First, start with the Product Rule for differentiation.</p>
+                <p>Integrate both sides of the equation to obtain:</p>
+                <div class="image-placeholder">Product Rule Image</div>
+                
+                <p>The Fundamental Theorem of Calculus tells us that if we take the derivative of the integral of a function, then we are left with the original function. The derivative and the integral "cancel" each other out.</p>
+                <div class="image-placeholder">Integration Both Sides Image</div>
+                
+                <p>This is the formula for Integration by Parts:</p>
+                <div class="formula">
+                    <p>∫u dv = uv - ∫v du</p>
+                </div>
+                
+                <p>Just as the Substitution Method could be thought of as the Chain Rule for integration, Integration by Parts could also be thought of as the Product Rule for integration.</p>
+                
+                <p>When using this formula, we need to choose which part of the integrand (what we are taking the integral of) is u, and which part of it is dv.</p>
+                <p>When choosing u and dv, we want to find a u that will be simplified after we take its derivative, and a dv that won't be too complex after integrating it.</p>
+                
+                <div class="example">
+                    <p class="example-title">Example Problem:</p>
+                    <div class="image-placeholder">Example 1 Image</div>
+                </div>
+                
+                <p>When choosing for <em>u</em>, remember the preference order "<strong>LIPET</strong>"</p>
+                <div class="image-placeholder">LIPET Image</div>
+                
+                <div class="example">
+                    <p class="example-title">Another Example Problem:</p>
+                    <div class="image-placeholder">Example 2 Image</div>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">A More Complicated Example:</p>
+                    <div class="image-placeholder">Example 3 Image</div>
+                    <p>This is called solving for the unknown integral. When we have a product in which both factors never run out of integrals or derivatives, we can solve for the unknown integral by using the <em>Integration by Parts</em> formula repeatedly until the original integral shows up in the problem again.</p>
+                    <p>When solving for the unknown integral, it is usually a good idea to stay consistent with your <em>u</em> and <em>dv</em>. That is, if you chose u to be sin x in your first integral, you would want to choose the trig function (in this case cos x) to be u for your following integrals.</p>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">Final Example:</p>
+                    <div class="image-placeholder">Example 4 Part 1 Image</div>
+                    <p>Notice that when we choose u and dv the second time, u the second time is du from the first, and dv this time is v from the first time.</p>
+                    <div class="image-placeholder">Example 4 Part 2 Image</div>
+                    <p>If we were to use Integration by Parts on the last integral we would have:</p>
+                    <div class="image-placeholder">Example 4 Part 3 Image</div>
+                    <p>Again u this time is du from the previous integral, and dv this time is v from the previous integral. First of all, finishing this integral, we have:</p>
+                    <div class="image-placeholder">Example 4 Part 4 Image</div>
+                    <p>Now, keep this answer in mind, but let's take a different look at this problem:</p>
+                    <div class="image-placeholder">Example 4 Part 5 Image</div>
+                    <p>We'll choose the same u and dv as we did the first time, but this time, let's take the derivative of u all the way through and integrate dv for everytime we differentiate u.</p>
+                    <div class="image-placeholder">Example 4 Part 6 Image</div>
+                    <p>Notice that when we keep taking the derivative of u it eventually goes to 0 and dv never runs out of integrals.</p>
+                    <p>If we multiply each u by its respective v and we switch the signs each time we add each part together we get:</p>
+                    <div class="image-placeholder">Example 4 Part 7 Image</div>
+                    <p>This method is called <strong>tabular integration</strong>. This works when the derivatives of u eventually reach 0 and the integrals of dv never end. This is much quicker than using the formula over and over again.</p>
+                </div>
+                
+                <a href="https://classroom.google.com/c/NzQ2NTI5NzkzODI0/m/NzQ3Mzg4MTEwNzI1/details" class="resource-link" target="_blank">Download PDF/PPT Resources</a>
+            </div>
+        </section>
+
+        <!-- Integration by Substitution -->
+        <section class="content-section" id="integration-substitution">
+            <h2 class="section-title">Integration by Substitution</h2>
+            
+            <div class="section-content">
+                <a href="https://youtu.be/sdYdnpYn-1o?feature=shared" class="youtube-link" target="_blank">Watch YouTube Tutorial</a>
+                
+                <h3 class="section-subtitle">Content</h3>
+                <p>Welcome to Integration by Substitution! Let's start with important rules and derivatives that you should probably write down to reference later:</p>
+                
+                <h4 class="section-subtitle">Derivatives</h4>
+                <div class="image-placeholder">All Derivatives Image</div>
+                
+                <h4 class="section-subtitle">Basic Integration Rules</h4>
+                <div class="image-placeholder">Integration Rules Image</div>
+                
+                <h4 class="section-subtitle">Anti-integration rules</h4>
+                <div class="image-placeholder">Anti-integration Rules Image</div>
+                
+                <h4 class="section-subtitle">Table of Trigonometric Substitutions</h4>
+                <div class="image-placeholder">Table of Trigonometric Substitutions Image</div>
+                
+                <p>Got all that? Good! Let's now move to <strong>Integration Rules:</strong></p>
+                
+                <ol>
+                    <li>
+                        <p><strong>Constant Rule</strong></p>
+                        <p>If <em>k</em> is any real number, then the indefinite integral of <em>k</em> with respect to <em>x</em> is:</p>
+                        <div class="formula">
+                            <p>∫k dx = kx + C</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Coefficient Rule</strong></p>
+                        <p>Given any real number coefficient a dn integral function of f:</p>
+                        <div class="formula">
+                            <p>∫a·f(x) dx = a·∫f(x) dx</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Sum and Difference Rule</strong></p>
+                        <p>For integrable functions of f and g:</p>
+                        <div class="formula">
+                            <p>∫[f(x) ± g(x)] dx = ∫f(x) dx ± ∫g(x) dx</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Power Rule</strong></p>
+                        <p>For any real number n, where n ≠ -1, the indefinite integral of x^n is:</p>
+                        <div class="formula">
+                            <p>∫x^n dx = (x^(n+1))/(n+1) + C</p>
+                        </div>
+                    </li>
+                </ol>
+                
+                <p>Integration by substitution can be used for a variety of integrals: some products, some compound functions and some quotients. Sometimes we have a choice of method.</p>
+                
+                <h4 class="section-subtitle">Choosing u:</h4>
+                <p>In general, for the types of problems we are concerned with, there are three cases. We choose u to be one of the following:</p>
+                <ol>
+                    <li>the quantity under a root or raised to a power;</li>
+                    <li>the quantity in the denominator;</li>
+                    <li>the exponent on e.</li>
+                </ol>
+                <p>Remember that some integrands may need to be rearranged to fit one of these cases.</p>
+                
+                <h4 class="section-subtitle">Guidelines for u-Substitution</h4>
+                <p><strong>Step 1.</strong> Look for some composition <em>f(g(x))</em> within the integrand for which the substitution <em>u = g(x), du = g'(x) dx</em> produces an integral that is expressed entirely in terms of u and du. This may or may not be possible.</p>
+                <p><strong>Step 2.</strong> If you are successful in Step 1, then try to evaluate the resulting integral in terms of u. Again, this may or may not be possible.</p>
+                <p><strong>Step 3.</strong> If you are successful in Step 2, then replace u by g(x) to express your final answer in terms of x.</p>
+                
+                <div class="example">
+                    <p class="example-title">Example:</p>
+                    <div class="image-placeholder">Example 1 Image</div>
+                </div>
+                
+                <p>The chain rule allows us to differentiate a wide variety of functions, but are we able to find antiderivatives for only a limited range of functions? We can sometimes use <strong>substitution</strong> or <strong>change of variable</strong> to rewrite functions in a form that we can integrate.</p>
+                
+                <div class="example">
+                    <p class="example-title">Another Example:</p>
+                    <div class="image-placeholder">Example 2 Part 1 Image</div>
+                    <p>One of the clues that we look for is if we can find a function and its derivative in the integral.</p>
+                    <div class="image-placeholder">Example 2 Part 2 Image</div>
+                    <p>Note that this only worked because of the 2x in the original. Many integrals can not be done by substitution.</p>
+                </div>
+                
+                <a href="https://classroom.google.com/c/NzQ2NTI5NzkzODI0/m/NzM3NDE1NjU3NzQx/details" class="resource-link" target="_blank">Download PDF/PPT Resources</a>
+            </div>
+        </section>
+
+        <!-- Areas and Definite Integrals -->
+        <section class="content-section" id="areas-definite-integrals">
+            <h2 class="section-title">Areas and Definite Integrals</h2>
+            
+            <div class="section-content">
+                <a href="https://youtu.be/UjTTx2eYrx8?feature=shared" class="youtube-link" target="_blank">Watch YouTube Tutorial</a>
+                
+                <h3 class="section-subtitle">Content</h3>
+                <p>How do we find the area under a curve but above the x-axis? Using <strong>Antiderivatives</strong>!</p>
+                <div class="image-placeholder">Graph 1 Image</div>
+                
+                <p>As the number of rectangles used to approximate the area of the region increases, the approximation becomes more accurate.</p>
+                <div class="image-placeholder">Graph 2 Image</div>
+                
+                <p>It is possible to find the exact area by letting the width of each rectangle approach zero. Doing this generates an infinite number of rectangles.</p>
+                <div class="image-placeholder">Graph 3 Image</div>
+                
+                <p>The definite integral of f from a to b is the limit of the <em>Riemann sum</em> as the lengths of the subintervals approach zero.</p>
+                <p>A function and the equation for the area between its graph and the x-axis are related to each other by the antiderivative.</p>
+                
+                <div class="formula">
+                    <p>Area = ∫[a,b] f(x) dx</p>
+                </div>
+                
+                <div class="fun-fact">
+                    <p class="fun-fact-title">Fun fact!</p>
+                    <p>If you ever wanna find the instantaneous velocity of something, you can use <em>derivatives!</em></p>
+                </div>
+                
+                <div class="fun-fact">
+                    <p class="fun-fact-title">Fun fact Two!</p>
+                    <p>If you ever wanna find the area of exotic shapes, you can use the antiderivatives!</p>
+                </div>
+                
+                <p>Here's an important equation you should probably keep in mind</p>
+                <div class="formula">
+                    <p>∫[a,b] f(x) dx = F(b) - F(a)</p>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">Example Problem with Solution:</p>
+                    <div class="image-placeholder">Example 1 with Solution Image</div>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">Another Example:</p>
+                    <div class="image-placeholder">Example 2 with Solution Image</div>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">More Complex Example:</p>
+                    <div class="image-placeholder">Example 3 with Solution Image</div>
+                </div>
+                
+                <h3 class="section-subtitle">Summary</h3>
+                <ul>
+                    <li>As the number of rectangles used to approximate the area of the region increases, the approximation becomes more accurate.</li>
+                    <li>It is possible to find the exact area by letting the width of each rectangle approach zero. Doing this generates an infinite number of rectangles.</li>
+                    <li>A function and the equation for the area between its graph and the x-axis are related to each other by the antiderivative.</li>
+                    <li>The Fundamental Theorem of Calculus enables us to evaluate definite integrals. This empowers us to find the area between a curve and the x-axis.</li>
+                </ul>
+                
+                <a href="https://classroom.google.com/c/NzQ2NTI5NzkzODI0/m/NzUxODg0ODUzNjU4/details" class="resource-link" target="_blank">Download PDF/PPT Resources</a>
+            </div>
+        </section>
+
+        <!-- Volumes by Disks, Washers and Shells -->
+        <section class="content-section" id="volumes">
+            <h2 class="section-title">Volumes by Disks, Washers and Shells</h2>
+            
+            <div class="section-content">
+                <a href="https://youtu.be/SAHSVg7Jw_A?feature=shared" class="youtube-link" target="_blank">Watch YouTube Tutorial</a>
+                
+                <h3 class="section-subtitle">Content</h3>
+                <p>Say you have a loaf of bread, and you wanna find out its volume. Since you studied calculus, you know that by slicing the loaf, you can get the slice's volume by multiplying the <strong>area of the slice</strong> and the <strong>thickness</strong> of it.</p>
+                <div class="formula">
+                    <p>Volume = Area × Thickness</p>
+                </div>
+                
+                <p>Of course, lest we get slices infinitely thin, you'd know that we have to integrate that whole thing</p>
+                <div class="formula">
+                    <p>Volume = ∫ A dt</p>
+                </div>
+                
+                <p>Okay, smarty pants. You know how to find the volume of a loaf, congrats. But riddle me this: What happens when you rotate a function?</p>
+                <div class="image-placeholder">Rotating a Function Image</div>
+                
+                <p>It traces a solid shape! Look at it, now we have half of an egg to put on your toast!</p>
+                <p>All jokes aside, let's get a bit serious. Finding the volume of slices can be a bit complicated, so let's take a step by step approach here.</p>
+                
+                <p>If you chop our previous function, and take a slice, you'd get a circle. Thus, the area of a slice would be A= πr²</p>
+                <div class="image-placeholder">Sliced Function Image</div>
+                
+                <p>"But what happened to the earlier formula!?" I hear you ask. Well, we simply substitute the Area into the equation! Since area is πr², then volume is simply...</p>
+                <div class="formula">
+                    <p>Volume = ∫ πr² dt</p>
+                </div>
+                
+                <p>This is what's called the <strong>Disk Formula</strong>
+
+                <p>Now imagine the dt as dy, radius (r) as x and substitute that x for f(y).</p>
+                <div class="formula">
+                    <p>Volume = π∫ [f(y)]² dy</p>
+                </div>
+                
+                <p>Which is generally the more used version!</p>
+                
+                <p>Now what if the slice isn't solid, and has a hole in the middle? For cases like this, we use the <strong>Washer Formula</strong></p>
+                <div class="image-placeholder">Washer Slice Image</div>
+                
+                <p>Notice how there's two Rs? Since we're no longer dealing with a solid slice, there's now two circles instead of one. The big R represents the outside circle of the slice and the small r represents the inner circle.</p>
+                
+                <p>For this holed slice, the area is π(R²-r²), or simply A = π(R²-r²)</p>
+                
+                <p>Recalling the original formula of volume (<em>VOLUME = ∫ A dt</em>), we can now replace the "A". The result of that substitution will be the washer formula</p>
+                
+                <div class="formula">
+                    <p>Volume = ∫ π(R² - r²) dt</p>
+                </div>
+                
+                <p>Same drill as before, let's replace the <em>big (R)</em> with f(x) and the <em>small r</em> with g(x). Do the same with dt being <em>dx</em> and we first get a long string like:</p>
+                
+                <div class="formula">
+                    <p>Volume = π∫ [(f(x))² - (g(x))²] dx</p>
+                </div>
+                
+                <p>Then the final form of the <strong>washer formula</strong></p>
+                
+                <div class="formula">
+                    <p>Volume = π∫ [(f(x))² - (g(x))²] dx</p>
+                </div>
+                
+                <div class="example">
+                    <p class="example-title">Example:</p>
+                    <div class="image-placeholder">Example 1 Image</div>
+                </div>
+                
+                <p>And this concludes the disk and washer method! Remember...</p>
+                <ul>
+                    <li>Rotate</li>
+                    <li>Slice</li>
+                    <li>Integrate!</li>
+                </ul>
+                
+                <a href="https://classroom.google.com/c/NzQ2NTI5NzkzODI0/m/NzYxNDI2OTQxNzEz/details" class="resource-link" target="_blank">Download PDF/PPT Resources</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section class="content-section" id="about">
+        <div class="about-content">
+            <h2>About This Blog</h2>
+            <p>Welcome to our Math Calculus Blog! This educational resource is designed to help students master integral calculus through clear explanations, practical examples, and real-world applications.</p>
+            <p>Our content is structured to build your understanding progressively, from the fundamental concepts of integration to more advanced techniques like integration by parts, substitution, and applications to finding areas and volumes.</p>
+            <p>Each section includes video tutorials, downloadable resources, and plenty of examples to help you practice and solidify your understanding.</p>
+            <p>Whether you're a student struggling with calculus concepts or just someone interested in mathematics, we hope this resource helps you appreciate the beauty and utility of integral calculus.</p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>

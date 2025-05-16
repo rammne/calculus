@@ -1,0 +1,338 @@
+:root {
+    --primary-color: #3f51b5;
+    --secondary-color: #303f9f;
+    --accent-color: #ff4081;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Drawer styles */
+.drawer-toggle {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.drawer-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+.drawer {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 4rem 1rem 1rem;
+    transition: var(--transition);
+    z-index: 998;
+    overflow-y: auto;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    display: none;
+}
+
+.drawer-backdrop.open {
+    display: block;
+}
+
+.drawer-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.drawer-section {
+    margin-bottom: 0.5rem;
+}
+
+.drawer-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.drawer-link:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 2rem;
+    margin-top: 64px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background-color: #f50057;
+    transform: translateY(-2px);
+}
+
+/* Content sections */
+.content-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.section-content {
+    margin-bottom: 1.5rem;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content ul, .section-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.fun-fact {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.fun-fact-title {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.formula {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.example {
+    background-color: #fff8e1;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.example-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.youtube-link {
+    display: inline-block;
+    margin: 1rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+
+.resource-link {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+/* About section */
+#about {
+    display: none;
+}
+
+.about-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+/* Placeholder for images */
+.image-placeholder {
+    background-color: #e0e0e0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #757575;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+    }
+}
