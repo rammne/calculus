@@ -135,3 +135,91 @@ window.addEventListener('DOMContentLoaded', () => {
     aboutContent.style.display = 'none';
     heroSection.style.display = 'flex';
 });
+
+// The drawer functionality is already handled by the event listeners at the top of this file
+
+// Handle section visibility animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // If the section is visible
+        if (entry.isIntersecting) {
+            // Make section title visible if it's not already
+            const sectionTitle = entry.target.querySelector('.section-title');
+            if (sectionTitle && !sectionTitle.style.opacity) {
+                sectionTitle.style.opacity = "1";
+            }
+            
+            // Make section content visible
+            const sectionContent = entry.target.querySelector('.section-content');
+            if (sectionContent) {
+                sectionContent.classList.add('visible');
+            }
+            
+            // Observe each element with .fun-fact, .formula, or .example class
+            const animatedElements = entry.target.querySelectorAll('.fun-fact, .formula, .example');
+            let delay = 0.1;
+            animatedElements.forEach(element => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                element.style.transitionDelay = `${delay}s`;
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, delay * 1000);
+                
+                delay += 0.15; // Increment delay for each element
+            });
+        }
+    });
+}, { threshold: 0.1 }); // When at least 10% of the section is visible
+
+// Observe all sections
+document.querySelectorAll('.content-section').forEach(section => {
+    observer.observe(section);
+});
+
+// Add smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === "#about") {
+            const aboutSection = document.getElementById('about');
+            aboutSection.style.display = 'block';
+            document.querySelectorAll('.content-section').forEach(section => {
+                if (section.id !== 'about') {
+                    section.style.display = 'none';
+                }
+            });
+            document.getElementById('home-link').classList.remove('active');
+            document.getElementById('about-link').classList.add('active');
+        } else {
+            document.getElementById('about').style.display = 'none';
+            document.querySelectorAll('.content-section').forEach(section => {
+                if (section.id !== 'about') {
+                    section.style.display = 'block';
+                }
+            });
+            
+            if (targetId !== "#home") {
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Adjust for navbar height
+                    behavior: 'smooth'
+                });
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+            
+            document.getElementById('home-link').classList.add('active');
+            document.getElementById('about-link').classList.remove('active');
+        }
+    });
+});
